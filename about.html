@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0"> 
+    <title>Talk To Me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="sub-header-2">
+        <nav>
+            <a href="home.html"><img src="Images/logo.png"></a>
+            <div class ="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="about.html" class="active">ABOUT US</a></li>
+                        <li><a href="review.html">REVIEW</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <!-- <img src="../Images/bg.jpg" alt="background-image"> -->
+        <div class="text-box">
+            <h1>LET'S CONTROL THE WORLD OVER THE VOICE</h1>
+            <p> Making Talktome part of your day is as simple as asking a question. 
+                Talktome can play your favorite song,<br>read the latest headlines, dim the lights in your living room, 
+                and more.</p>
+            <a href="" class="hero-btn">Visit Us To Know More</a>    
+        </div>
+    </section>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+    </script>
+    
+
+    
+
+    <!--About us content-->
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>About Me</h1>
+                <!-- <h5>A UniverSity Student</h5> -->
+                
+                <p>Im a BSc(Hons) Artificial Intelligence and 
+                    Data Science undergraduate student at Robert
+                     Gordon University, UK.
+                    Aritificial Intelligence is my major and 
+                    which enables lots of job opportuinities 
+                    and also, hope to persure my career in this 
+                    field.
+                    I am interested in web development since 
+                    it's very fun to learn.<br>
+
+                </p>
+                <a href="contact.html" class="hero-btn">LET'S TALK</a>
+            </div>
+            <div class="about-col">
+                <img src="Images/myPic.jpg" alt="My Picture">
+            </div>
+            
+            </div>
+        </div>
+    </section>
+    
+
+    <button onclick="backToTop()" id="top-button">&#94;</button>
+<!--topUp button-->
+<script type="text/javascript">
+   
+let button = document.getElementById("top-button");
+
+
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+}
+
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+</script>
+
+<section class="footer">
+    <p>TalkToMe is a website where you can purchase AI based<br>voice controlled devices for an affordable price.</p>
+        <div class="icons">
+            <i class="fa fa-facebook" style="color: blue;"></i>
+            <i class="fa fa-twitter" style="color: skyblue;"></i>
+            <i class="fa fa-instagram" style="color: pink;"></i>
+            <i class="fa fa-linkedin" style="color: whitesmoke;"></i>
+        </div>
+        <p>Mail with <i class="fa fa-heart-o"></i> by Rashadha Rimsan</p>
+</section>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0"> 
+    <title>Talk To Me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="home.html"><img src="Images/logo.png"></a>
+            <div class ="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="review.html">REVIEW</a></li>
+                        <li><a href="contact.html" class="active">CONTACT</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <!-- <img src="../Images/bg.jpg" alt="background-image"> -->
+        <div class="text-box">
+            <h1>LET'S CONTROL THE WORLD OVER THE VOICE</h1>
+            <p> Making Talktome part of your day is as simple as asking a question. 
+                Talktome can play your favorite song,<br>read the latest headlines, dim the lights in your living room, 
+                and more.</p>
+            <a href="" class="hero-btn">Visit Us To Know More</a>    
+        </div>
+    </section>
+    <!--humburger menu-->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+    </script>
+
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58585296622!2d79.78633600029819!3d6.9220039715331705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1663523584042!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span>
+                        <h5>Rashadha Rimsan</h5>
+                        <p>RGU username-2122096</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Peradenuya Road, Jake Building</h5>
+                        <p>Colombo, LK</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5><a href="mailto:rimsan.2021001@iit.ac.lk">rimsan.2021001@iit.ac.lk</a></h5>
+                        <p>Email us your query</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form name="form1" onsubmit="return validate();">
+                    <div class="float-label">
+                        <input class="float-input" type="text" placeholder=" " name="Name">
+                        <span class="highlight"></span>
+                        <label for="">Name</label>
+                    </div>
+                    <div class="float-label">
+                        <input class="float-input" type="text" placeholder=" " name="Email">
+                        <span class="highlight"></span>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="float-label">
+                        <select class="float-select" onclick="this.setAttribute('value', this.value);" value="" name="subject">
+                            <option value=""></option>
+                            <option value="option1">Price</option>
+                            <option value="option2">Upgrades</option>
+                            <option value="option3">Delivery</option>
+                        </select>
+                        <span class="highlight"></span>
+                        <label for="">Select</label>
+                    </div>
+                    <div class="float-label">
+                        <textarea class="float-input float-textarea" rows="8" placeholder=" " name="message"></textarea>
+                        <span class="highlight"></span>
+                        <label for="">Query</label>
+                    </div>
+                    <button type="submit" class="hero-btn" style="background-color:black">Send Message</button>
+                </form>
+
+                <!--To validate query form-->
+                <script type="text/javascript">
+                     function validate()
+                     {
+                        var email = document.form1.Email.value;
+                        var positionOfAt = email.indexOf("@");
+                        var positionOfDot = email.lastIndexOf("."); 
+                        
+
+                        if(document.form1.Name.value==""){
+                            alert("Your name can't be blank");
+                            document.form1.Name.focus();
+                            return false;
+                        }
+                        if(positionOfAt<1 || (positionOfDot-positionOfAt<2)){
+                            alert("Please enter a valid email address");
+                            document.form1.Email.focus();
+                            return false;
+                        }
+                        if(document.form1.subject.value == ""){
+                            alert("Please provide the subject");
+                            return false;
+                        }
+                        if(document.form1.message.value==""){
+                            alert("Your message can't be blank");
+                            document.form1.Name.focus();
+                            return false;
+                        }
+                        
+                        alert("Dear "+ document.form1.Name.value +" , Thank you very much for your query, the requested information will be sent via an email.");
+                        
+                        return true;
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <button onclick="backToTop()" id="top-button">&#94;</button>
+<!--topUp button-->
+<script type="text/javascript">
+   
+let button = document.getElementById("top-button");
+
+
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+}
+
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+</script>
+    
+
+<section class="footer">
+    <p>TalkToMe is a website where you can purchase AI based<br>voice controlled devices for an affordable price.</p>
+        <div class="icons">
+            <i class="fa fa-facebook" style="color: blue;"></i>
+            <i class="fa fa-twitter" style="color: skyblue;"></i>
+            <i class="fa fa-instagram" style="color: pink;"></i>
+            <i class="fa fa-linkedin" style="color: whitesmoke;"></i>
+        </div>
+        <p>Mail with <i class="fa fa-heart-o"></i> by Rashadha Rimsan</p>
+</section>
+</body>
+</html>

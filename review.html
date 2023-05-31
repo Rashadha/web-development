@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0"> 
+    <title>Talk To Me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="sub-header-3">
+        <nav>
+            <a href="home.html"><img src="Images/logo.png"></a>
+            <div class ="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="review.html" class="active">REVIEW</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <!-- <img src="../Images/bg.jpg" alt="background-image"> -->
+        <div class="text-box">
+            <h1>LET'S CONTROL THE WORLD OVER THE VOICE</h1>
+            <p> Making Talktome part of your day is as simple as asking a question. 
+                Talktome can play your favorite song,<br>read the latest headlines, dim the lights in your living room, 
+                and more.</p>
+            <a href="" class="hero-btn">Visit Us To Know More</a>    
+        </div>
+    </section>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+    </script>
+
+<section class="feedback">
+    <h1>What Our Buyer Says</h1>
+    <p>These are some feedbacks from our buyers.</p>
+
+    <div class="row">
+        <div class="feedback-col">
+            <img src="Images/user1.jpg" alt="user-1">
+            <div>
+                <p id="review1-p"></p>
+                <h3 id="review1-h3"></h3>
+                
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>    
+        </div>
+
+        <div class="feedback-col">
+            <img src="Images/user2.jpg" alt="user-2">
+            <div>
+                <p id="review2-p"></p>
+                <h3 id="review2-h3"></h3>
+                
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="feedback-col">
+            <img src="Images/user4.jpg" alt="user-3">
+            <div>
+                <p id="review3-p"></p>
+                <h3 id="review3-h3"></h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>    
+        </div>
+
+        <div class="feedback-col">
+            <img src="Images/user3.jpg" alt="user-4">
+            <div>
+                <p id="review4-p"></p>
+                <h3 id="review4-h3"></h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="feedback-col">
+            <img src="Images/user5.jpg" alt="user-5">
+            <div>
+                <p id="review5-p"></p>
+                <h3 id="review5-h3"></h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>    
+        </div>
+
+        <div class="feedback-col">
+            <img src="Images/user6.jpg" alt="user-6">
+            <div>
+                <p id="review6-p"></p>
+                <h3 id="review6-h3"></h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>    
+        </div>
+    </div>
+</section>
+
+<!--Js to read customer reviews from xml file-->
+<script>
+    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        showResult(xhttp.responseXML);
+                    }
+                    };
+                    xhttp.open("GET", "review.xml", true);
+                    xhttp.send(); 
+
+                    function showResult(xml) {
+                    
+                    var txt1 = "";
+                    var txt2 = "";
+                    var txt3 = "";
+                    var txt4 = "";
+                    var txt5 = "";
+                    var txt6 = "";
+                    var txt7 = "";
+                    var txt8 = "";
+                    var txt9 = "";
+                    var txt10 = "";
+                    var txt11 = "";
+                    var txt12 = "";
+                    
+                    path1 = "/catalog/feedback[1]/message";
+                    path2 = "/catalog/feedback[1]/name";
+                    path3 = "/catalog/feedback[2]/message";
+                    path4 = "/catalog/feedback[2]/name";
+                    path5 = "/catalog/feedback[3]/message";
+                    path6 = "/catalog/feedback[3]/name";
+                    path7 = "/catalog/feedback[4]/message";
+                    path8 = "/catalog/feedback[4]/name";
+                    path9 = "/catalog/feedback[5]/message";
+                    path10 = "/catalog/feedback[5]/name";
+                    path11 = "/catalog/feedback[6]/message";
+                    path12 = "/catalog/feedback[6]/name";
+                    if (xml.evaluate) {
+                        
+                        var nodes1 = xml.evaluate(path1, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes2 = xml.evaluate(path2, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes3 = xml.evaluate(path3, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes4 = xml.evaluate(path4, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes5 = xml.evaluate(path5, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes6 = xml.evaluate(path6, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes7 = xml.evaluate(path7, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes8 = xml.evaluate(path8, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes9 = xml.evaluate(path9, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes10 = xml.evaluate(path10, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes11 = xml.evaluate(path11, xml, null, XPathResult.ANY_TYPE, null);
+                        var nodes12 = xml.evaluate(path12, xml, null, XPathResult.ANY_TYPE, null);
+                        
+                        var result1 = nodes1.iterateNext();
+                        var result2 = nodes2.iterateNext();
+                        var result3 = nodes3.iterateNext();
+                        var result4 = nodes4.iterateNext();
+                        var result5 = nodes5.iterateNext();
+                        var result6 = nodes6.iterateNext();
+                        var result7 = nodes7.iterateNext();
+                        var result8 = nodes8.iterateNext();
+                        var result9 = nodes9.iterateNext();
+                        var result10 = nodes10.iterateNext();
+                        var result11 = nodes11.iterateNext();
+                        var result12 = nodes12.iterateNext();
+                        
+                        while (result1) {
+                              txt1 += result1.childNodes[0].nodeValue + "<br>";
+                              result1 = nodes1.iterateNext();
+                        } 
+                        while (result2) {
+                              txt2 += result2.childNodes[0].nodeValue + "<br>";
+                              result2 = nodes2.iterateNext();
+                        } 
+                        while (result3) {
+                              txt3 += result3.childNodes[0].nodeValue + "<br>";
+                              result3 = nodes3.iterateNext();
+                        } 
+                        while (result4) {
+                              txt4 += result4.childNodes[0].nodeValue + "<br>";
+                              result4 = nodes4.iterateNext();
+                        } 
+                        while (result5) {
+                              txt5 += result5.childNodes[0].nodeValue + "<br>";
+                              result5 = nodes5.iterateNext();
+                        } 
+                        while (result6) {
+                              txt6 += result6.childNodes[0].nodeValue + "<br>";
+                              result6 = nodes6.iterateNext();
+                        } 
+                        while (result7) {
+                              txt7 += result7.childNodes[0].nodeValue + "<br>";
+                              result7 = nodes7.iterateNext();
+                        } 
+                        while (result8) {
+                              txt8 += result8.childNodes[0].nodeValue + "<br>";
+                              result8 = nodes8.iterateNext();
+                        } 
+                        while (result9) {
+                              txt9 += result9.childNodes[0].nodeValue + "<br>";
+                              result9 = nodes9.iterateNext();
+                        } 
+                        while (result10) {
+                              txt10 += result10.childNodes[0].nodeValue + "<br>";
+                              result10 = nodes10.iterateNext();
+                        } 
+                        while (result11) {
+                              txt11 += result11.childNodes[0].nodeValue + "<br>";
+                              result11 = nodes11.iterateNext();
+                        } 
+                        while (result12) {
+                              txt12 += result12.childNodes[0].nodeValue + "<br>";
+                              result12 = nodes12.iterateNext();
+                        } 
+                    }   
+                    else if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+                            xml.setProperty("SelectionLanguage", "XPath");
+                            
+                            nodes1 = xml.selectNodes(path1);
+                            nodes2 = xml.selectNodes(path2);
+                            nodes3 = xml.selectNodes(path3);
+                            nodes4 = xml.selectNodes(path4);
+
+                            nodes5 = xml.selectNodes(path5);
+                            nodes6 = xml.selectNodes(path6);
+
+                            nodes7 = xml.selectNodes(path7);
+                            nodes8 = xml.selectNodes(path8);
+
+                            nodes9 = xml.selectNodes(path9);
+                            nodes10 = xml.selectNodes(path10);
+
+                            nodes11 = xml.selectNodes(path11);
+                            nodes12 = xml.selectNodes(path12);
+
+
+                            
+                            for (j = 0; i < nodes1.length; j++) {
+                                 txt1 += nodes1[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes2.length; j++) {
+                                 txt2 += nodes2[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes3.length; j++) {
+                                 txt3 += nodes3[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes4.length; j++) {
+                                 txt4 += nodes4[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes5.length; j++) {
+                                 txt5 += nodes5[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes6.length; j++) {
+                                 txt6 += nodes6[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes7.length; j++) {
+                                 txt7 += nodes7[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes8.length; j++) {
+                                 txt8 += nodes8[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes9.length; j++) {
+                                 txt9 += nodes9[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes10.length; j++) {
+                                 txt10 += nodes10[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes11.length; j++) {
+                                 txt11 += nodes11[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            for (j = 0; i < nodes12.length; j++) {
+                                 txt12 += nodes12[j].childNodes[0].nodeValue + "<br>";
+                            }
+                            
+                    }
+                    document.getElementById("review1-p").innerHTML = txt1;
+                    document.getElementById("review1-h3").innerHTML = txt2;
+
+                    document.getElementById("review2-p").innerHTML = txt3;
+                    document.getElementById("review2-h3").innerHTML = txt4;
+
+                    document.getElementById("review3-p").innerHTML = txt5;
+                    document.getElementById("review3-h3").innerHTML = txt6;
+
+                    document.getElementById("review4-p").innerHTML = txt7;
+                    document.getElementById("review4-h3").innerHTML = txt8;
+
+                    document.getElementById("review5-p").innerHTML = txt9;
+                    document.getElementById("review5-h3").innerHTML = txt10;
+
+                    document.getElementById("review6-p").innerHTML = txt11;
+                    document.getElementById("review6-h3").innerHTML = txt12;
+                    }
+</script>
+<button onclick="backToTop()" id="top-button">&#94;</button>
+<!--topUp button-->
+<script type="text/javascript">
+   
+let button = document.getElementById("top-button");
+
+
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+}
+
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+</script>
+
+<section class="footer">
+    <p>TalkToMe is a website where you can purchase AI based<br>voice controlled devices for an affordable price.</p>
+        <div class="icons">
+            <i class="fa fa-facebook" style="color: blue;"></i>
+            <i class="fa fa-twitter" style="color: skyblue;"></i>
+            <i class="fa fa-instagram" style="color: pink;"></i>
+            <i class="fa fa-linkedin" style="color: whitesmoke;"></i>
+        </div>
+        <p>Mail with <i class="fa fa-heart-o"></i> by Rashadha Rimsan</p>
+</section>
+</body>
+</html>

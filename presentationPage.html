@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0"> 
+    <title>Talk To Me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="pre-header">
+        <!-- <img src="../Images/bg.jpg" alt="background-image"> -->
+        <div class="text-box present-content">
+            <h1>WELCOME</h1>
+            <h2>TO</h2>
+            <h2>TALK TO ME</h2>
+            <p class="summary">
+                <h3>
+                <br>Designed By <span class="creator">Rashadha Rimsan </span><br>
+                RGU username - <span class="username">2122096</span>
+            </h3>
+            </p>
+        </div>
+        <div>
+            <p>
+                Main Page loading in 
+                <span id="timer">3 </span>
+                seconds...
+            </p>
+        </div>
+        <!--set countdown-->
+        <script type="text/javascript">
+            var timeleft = 3;
+            var timeCounter = setInterval(function()
+            {
+                timeleft--;
+                document.getElementById("timer").innerHTML = timeleft;
+                if(timeleft==0){
+                    clearInterval(timeCounter);
+                }
+            },1000);
+            function directToHome(){
+                window.location="home.html";
+            }
+            setTimeout('directToHome()',3000);
+        </script>
+    </section>
+    
+    
+
+
+</body>
+</html>

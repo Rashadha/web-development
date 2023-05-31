@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0"> 
+    <title>Talk To Me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="home.html"><img src="Images/logo.png"></a>
+            <div class ="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="home.html" class="active">HOME</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="review.html">REVIEW</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <!-- <img src="../Images/bg.jpg" alt="background-image"> -->
+        <div class="text-box">
+            <h1>LET'S CONTROL THE WORLD OVER THE VOICE</h1>
+            <p> Making Talktome part of your day is as simple as asking a question. 
+                Talktome can play your favorite song,<br>read the latest headlines, dim the lights in your living room, 
+                and more.</p>
+            <a href="" class="hero-btn">Visit Us To Know More</a>    
+        </div>
+    </section>
+    <!--humburger menu-->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+    </script>
+
+<section class="gadget">
+    <h1>Our Gadgets</h1>
+    <p>Some of voice controlling gadgets created by our company.</p>
+
+    <div class="row">
+        <div class="gadget-col">
+            <img src="images/image1.jpg" alt="Voice-Controlled Smart Lighting">
+            <div class="layer-1">
+                <h3>Voice-Controlled Smart Lighting</h3>
+                <p>Smart lighting can come in handy in lots of day-to-day situations.  
+                You can dim the light in the living room over your voice, 
+                without getting up from the sofa. Or you can create 
+                individual room profiles for different circumstances 
+                and activate them remotely whenever you like.</p>
+            </div>
+        </div>
+
+        <div class="gadget-col">
+            <img src="images/image2.jpg" alt="TalkToMe Echo system">
+            <div class="layer-1">
+                <h3>TalkToMe Echo</h3>
+                <p>TalkToMe Echo is something like Siri 
+                for your home. Echo can be activated with a 
+                special password, after which you can dictate 
+                shopping lists, ask about the weather, 
+                stocks, news, or anything else that you 
+                might normally turn to Google for.</p>
+            </div>
+        </div>
+
+        <div class="gadget-col">
+            <img src="images/image3.png" alt="EarTalk earphone">
+            <div class="layer-1">
+                <h3>EarTalk</h3>
+                <p>EarTalk allows you to control your phone 
+                    through a voice-activated earbud. 
+                    You can keep the phone in your bag or 
+                    pocket and let your voice do the rest..</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="gadget">
+
+    <div class="row">
+        <div class="gadget-col">
+            <img src="images/image4.jpg" background="#0095A9" alt="TalkLight-smart light">
+            <div class="layer-1">
+                <h3>TalkLight</h3>
+                <p>Using your Google Assistant or Alexa, 
+                    you can control your smart bulbs with 
+                    just the sound of your voice making your 
+                    life a whole lot easier.
+                    Tailor your lighting ambiance to each 
+                    room - use the App to automatically dim your
+                     bulb for a romantic dinner or brighten your bulb 
+                     for working in the office or kitchen.</p>
+            </div>
+        </div>
+
+        <div class="gadget-col">
+            <img src="images/image5.jpg" alt="EchoTalk-echo system">
+            <div class="layer-1">
+                <h3>EchoTalk</h3>
+                <p>Talk about well-rounded. Echo combines 
+                premium sound, a built-in Zigbee smart 
+                home hub, and a temperature sensor. Powerful 
+                speakers deliver clear highs, dynamic mids, and 
+                deep bass for rich.Just ask Alexa to play music,
+                 answer questions, make calls, and tell you 
+                 the news, sports scores, weather, and more.</p>
+            </div>
+        </div>
+
+        <div class="gadget-col">
+            <img src="images/image6.jpeg" alt="ClearTalk headphone">
+            <div class="layer-1">
+                <h3>ClearTalk</h3>
+                <p>The clearTalk is a pair of fully wireless 
+                earphones. The product can be paired with any
+                 Bluetooth enabled audio/ video device.
+                Earphones can be charged up to 3 times in 
+                the charging case. Any modification of the 
+                product may have consequences for safety, 
+                warranty and proper functioning.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feature-versions">
+    <h1>Features OF TalkToMe</h1>
+    <p>The more advanced solutions use AI and machine learning.</p>
+    <div class="row">
+        <div class="feature-versions-col">
+            <h3>Language weighting</h3>
+            <p>Improve precision by weighting specific 
+                words that are spoken frequently 
+                (such as product names or industry jargon), 
+                beyond terms already in the base vocabulary.
+            </p>
+        </div>
+        <div class="feature-versions-col">
+            <h3>Speaker labeling</h3>
+            <p>Output a transcription that cites or tags 
+                each speaker’s contributions to a 
+                multi-participant conversation.
+            </p>
+        </div>
+        <div class="feature-versions-col">
+            <h3>Acoustics training</h3>
+            <p>Attend to the acoustical side of the business. 
+                Train the system to adapt to an acoustic 
+                environment (like the ambient noise in a call center) 
+                and speaker styles (like voice pitch, volume and pace).
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="feature-versions">
+    <h1>Versions OF TalkToMe</h1>
+    <p>There are a variety of different kinds of systems that fall under the larger umbrella of our voice-activated technology.</p>
+    <div class="row">
+        <div class="feature-versions-col">
+            <h3>Speaker Independent System</h3>
+            <p>Does not require training before use and is already capable of 
+                understanding most user’s voices.
+                 Many popular voice assistants use 
+                 speaker-independent systems.
+            </p>
+        </div>
+        <div class="feature-versions-col">
+            <h3>Continuous Speech Recognition</h3>
+            <p>Allows users to speak at a 
+                normal rate when interacting
+                 with the system.
+            </p>
+        </div>
+        <div class="feature-versions-col">
+            <h3>Natural Language</h3>
+            <p>Can understand a user’s words and their 
+                meaning, and can also respond to them,
+                 provide answers to questions, complete 
+                 commands, or deliver requested information.
+
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="branch">
+    <h1>Our Global Branches To Install Your Own TalkToMe</h1>
+    <p>You can install your own system from this places or Contact Us</p>
+    <div class="row">
+        <div class="branch-col">
+            <img src="Images/building1.png" alt="London branch">
+            <div class="layer">
+                <h3>LONDON</h3>
+            </div>
+        </div>
+
+        <div class="branch-col">
+            <img src="Images/building2.png" alt="Newyork branch">
+            <div class="layer">
+                <h3>NEWYORK</h3>
+            </div>
+        </div>
+
+        <div class="branch-col">
+            <img src="Images/building3.png" alt="Washington branch">
+            <div class="layer">
+                <h3>WASHINGTON</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="cta">
+    <h1>We are ready to deliver our gadgets to your doorstep</h1>
+    <a href="contact.html" class="hero-btn">CONTACT US</a>
+</section>
+
+<div class="editor">
+    <a href="about.html" class="hero-btn"><span>EDITOR</span></a>
+</div>
+
+<button onclick="backToTop()" id="top-button">&#94;</button>
+<!--topUp button-->
+<script type="text/javascript">
+   
+let button = document.getElementById("top-button");
+
+
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+}
+
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+</script>
+
+
+<section class="footer">
+    <p>TalkToMe is a website where you can purchase AI based<br>voice controlled devices for an affordable price.</p>
+        <div class="icons">
+            <i class="fa fa-facebook" style="color: blue;"></i>
+            <i class="fa fa-twitter" style="color: skyblue;"></i>
+            <i class="fa fa-instagram" style="color: pink;"></i>
+            <i class="fa fa-linkedin" style="color: whitesmoke;"></i>
+        </div>
+        <p>Mail with <i class="fa fa-heart-o"></i> by Rashadha Rimsan</p>
+</section>
+</body>
+</html>
